@@ -19,13 +19,18 @@ public:
         double _edge_weight;
     };
 
-  class Node {
+class Node {
   public:
         void add_neighbor(Graph::NodeId nodeid, double weight);
         const std::vector<Neighbor> & adjacent_nodes() const;
+        void set_parent(Graph::Node parent);
+        Graph::Node get_parent(Graph::Node node);
+        
   private:
         std::vector<Neighbor> _neighbors;
+        Graph::NodeId _parent;
     };
+
 
   enum DirType {directed, undirected};  // enum defines a type with possible values
   Graph(NodeId num_nodes, DirType dirtype);
