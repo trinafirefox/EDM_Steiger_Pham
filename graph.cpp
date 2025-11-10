@@ -40,6 +40,16 @@ const std::vector<Graph::Neighbor> & Graph::Node::adjacent_nodes() const
    return _neighbors;
 }
 
+void set_parent(Graph::Node parent){
+
+   _//parent = parent.id();
+
+}
+
+
+
+
+
 Graph::NodeId Graph::num_nodes() const
 {
    return _nodes.size();

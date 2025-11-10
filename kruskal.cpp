@@ -1,7 +1,9 @@
 #include <iostream>
 #include "graph.h"
 
-void make_set(Graph::Node )
+void make_set(Graph::Node ){
+    
+}
 
 
 
