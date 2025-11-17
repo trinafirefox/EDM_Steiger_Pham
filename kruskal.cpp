@@ -35,14 +35,14 @@ void Union(std::vector<int>& parents, std::vector<int>& depth, int x, int y){
 
 
 
-int main(){
+int main(int argc, char* argv[]){
 
-    Graph G("inst_1.txt", Graph::undirected);
+    Graph G(argv[1], Graph::undirected);
     std::vector<int> parents(G.num_nodes(),0);
     std::vector<int> depth(G.num_nodes(),0);
     double total_weight = 0;
     Graph F(G.num_nodes(),Graph::undirected);
-    int count_edges_in_F;
+    int count_edges_in_F = 0;
 
 
     std::vector<std::tuple<double, Graph::NodeId, Graph::NodeId>> edge_list;
@@ -91,7 +91,7 @@ int main(){
     }
 
 
-    if(count_edges_in_F = G.num_nodes()-1){
+    if(count_edges_in_F == G.num_nodes()-1){
         std::cout << "The following is a minimum spanning tree with weight:" << total_weight << std::endl; 
         F.print();
     }else{
