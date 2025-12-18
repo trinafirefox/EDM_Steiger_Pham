@@ -103,7 +103,6 @@ CapValue solve_max_flow(Graph &G) {
     // Initialization per algorithm: height(s) = n
     height[s] = n;
     
-    // (Fix: Corrected access to static constant)
     excess[s] = Graph::infinite_capacity; // s doesn't become active
 
     //fill all edges from s
