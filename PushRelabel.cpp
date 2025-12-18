@@ -47,7 +47,6 @@ void activate_node(int v, int n, int t) {
     //the node is not sink or source
     //excess must be strictly positive
     //height of s is n, height of t is 0.
-    // Assuming s=0, t=1 based on main logic
     if (v != t && v != 0 && excess[v] > 0) {
         buckets[height[v]].push_back(v);
         if (height[v] > max_height) {
